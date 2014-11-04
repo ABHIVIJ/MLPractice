@@ -1,0 +1,64 @@
+fprintf("Loading the dataset.....\n");
+data = load('YearPredictionMSD.txt');
+
+y = data([1:463715],1);			% train_range : 1 to 463715
+X = data([1:463715],[2:end]);
+
+y_test = data([463716:end],1);		% test_range : 463716 to end
+X_test = data([463716:end],[2:end]);
+
+m = length(y);
+
+fprintf("Train and test data loaded\n");
+pause;
+
+fprintf("Normalizing Features ...\n");
+[X mu sigma] = featureNormalize(X);
+fprintf("Features normalized\n");
+pause;
+
+
+X = [ones(m,1) X];
+
+fprintf("Starting Gradient Descent\n"); 
+
+alpha = 0.01;
+num_iters = 1000;
+
+theta = zeros(size(X,2),1);
+[theta, J_history] = gradientDescent(X,y,theta,alpha,num_iters);
+
+fprintf("Gradient Descent Complete\n");
+pause;
+
+%convergence graph
+figure;
+plot(1:numel(J_history), J_history, '-g', 'LineWidth', 2);
+xlabel('Number of iterations');
+ylabel('Cost J');
+
+fprintf('Theta computed from gradient descent: \n');
+fprintf(' %f \n', theta);
+fprintf('\n');
+pause;
+
+X_test = [ones(length(y_test),1) X_test];
+
+cost_train = 0;
+cost_test = 0;
+
+cost_train = computeCost(X, y, theta);
+cost_test = computeCost(X_test, y_test, theta);
+
+fprintf('Cost(Training dataset) = %f \n', cost_train);
+fprintf('Cost(Test dataset) = %f \n', cost_test);
+pause;
+
+acc_train = 0;
+acc_test = 0;
+
+acc_train = findAccuracy(X, y, theta);
+acc_test = findAccuracy(X_test, y_test, theta);
+
+fprintf('Training set accuracy : %f \n', acc_train);
+fprintf('Test set accuracy : %f \n', acc_test); 
