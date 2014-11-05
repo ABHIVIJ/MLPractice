@@ -1,4 +1,4 @@
-fprintf("Loading the dataset.....\n");
+fprintf('Loading the dataset.....\n');
 data = load('YearPredictionMSD.txt');
 
 y = data([1:463715],1);			% train_range : 1 to 463715
@@ -20,7 +20,7 @@ pause;
 
 X = [ones(m,1) X];
 
-fprintf("Starting Gradient Descent\n"); 
+fprintf('Starting Gradient Descent\n'); 
 
 alpha = 0.01;
 num_iters = 1000;
@@ -42,6 +42,7 @@ fprintf(' %f \n', theta);
 fprintf('\n');
 pause;
 
+X_test = normalizeTestData(X_test,mu,sigma);
 X_test = [ones(length(y_test),1) X_test];
 
 cost_train = 0;
