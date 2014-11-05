@@ -1,5 +1,5 @@
 fprintf('Loading the dataset.....\n');
-data = load('YearPredictionMSD.txt');
+%data = load('YearPredictionMSD.txt');
 
 y = data([1:463715],1);			% train_range : 1 to 463715
 X = data([1:463715],[2:end]);
@@ -10,26 +10,29 @@ X_test = data([463716:end],[2:end]);
 m = length(y);
 
 fprintf("Train and test data loaded\n");
-pause;
 
 fprintf("Normalizing Features ...\n");
 [X mu sigma] = featureNormalize(X);
 fprintf("Features normalized\n");
-pause;
-
 
 X = [ones(m,1) X];
 
 fprintf('Starting Gradient Descent\n'); 
 
-alpha = 0.01;
-num_iters = 1000;
+alpha = 0.05;
+num_iters = 500;
 
 theta = zeros(size(X,2),1);
 [theta, J_history] = gradientDescent(X,y,theta,alpha,num_iters);
 
 fprintf("Gradient Descent Complete\n");
 pause;
+
+fprintf('initial 10 values of J\n');
+J_history(1:10)
+
+fprintf('final 10 values of J\n');
+J_history(num_iters-10+1:end)
 
 %convergence graph
 figure;
@@ -63,3 +66,5 @@ acc_test = findAccuracy(X_test, y_test, theta);
 
 fprintf('Training set accuracy : %f \n', acc_train);
 fprintf('Test set accuracy : %f \n', acc_test); 
+
+majority(X,y,X_test,y_test);
