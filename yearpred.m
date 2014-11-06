@@ -10,6 +10,14 @@ X_test = data([463716:end],[2:end]);
 m = length(y);
 
 fprintf("Train and test data loaded\n");
+pause;
+
+fprintf('Adding Quadratic Features\n');
+X = addQuadFeatures(X);
+fprintf('Training set quad now\n');
+X_test = addQuadFeatures(X_test);
+fprintf('X and X_test now contains quadratic features\n');
+pause;
 
 fprintf("Normalizing Features ...\n");
 [X mu sigma] = featureNormalize(X);
@@ -19,7 +27,7 @@ X = [ones(m,1) X];
 
 fprintf('Starting Gradient Descent\n'); 
 
-alpha = 0.003;
+alpha = 0.01;
 num_iters = 1000;
 
 theta = zeros(size(X,2),1);
