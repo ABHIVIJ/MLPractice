@@ -1,4 +1,4 @@
-function majority(X,y,X_test,y_test)
+function majority(y,y_test)
 	mp_year = mode(y);
 	h = mp_year*ones(length(y),1);
 	h_test = mp_year*ones(length(y_test),1);

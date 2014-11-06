@@ -19,8 +19,8 @@ X = [ones(m,1) X];
 
 fprintf('Starting Gradient Descent\n'); 
 
-alpha = 0.05;
-num_iters = 500;
+alpha = 0.003;
+num_iters = 1000;
 
 theta = zeros(size(X,2),1);
 [theta, J_history] = gradientDescent(X,y,theta,alpha,num_iters);
@@ -67,4 +67,4 @@ acc_test = findAccuracy(X_test, y_test, theta);
 fprintf('Training set accuracy : %f \n', acc_train);
 fprintf('Test set accuracy : %f \n', acc_test); 
 
-majority(X,y,X_test,y_test);
+majority(y,y_test);
