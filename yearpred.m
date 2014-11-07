@@ -13,6 +13,7 @@ fprintf("Train and test data loaded\n");
 pause;
 
 fprintf('Adding Polynomial Features\n');
+
 X = addPolyFeatures(X);
 fprintf('Training set Poly now\n');
 X_test = addPolyFeatures(X_test);
