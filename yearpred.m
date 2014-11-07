@@ -10,13 +10,13 @@ X_test = data([463716:end],[2:end]);
 m = length(y);
 
 fprintf("Train and test data loaded\n");
-pause
+pause;
 
-fprintf('Adding Quadratic Features\n');
-X = addQuadFeatures(X);
-fprintf('Training set quad now\n');
-X_test = addQuadFeatures(X_test);
-fprintf('X and X_test now contains quadratic features\n');
+fprintf('Adding Polynomial Features\n');
+X = addPolyFeatures(X);
+fprintf('Training set Poly now\n');
+X_test = addPolyFeatures(X_test);
+fprintf('X and X_test now contains Polynomial features\n');
 pause;
 
 fprintf("Normalizing Features ...\n");
