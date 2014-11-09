@@ -26,7 +26,7 @@ num_labels = 90;
 fprintf("Data ready\n");
 pause;
 
-lambda = 0;
+lambda = 0.01;
 
 all_theta = onevsall(X, y, num_labels, lambda);
 

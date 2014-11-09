@@ -11,4 +11,7 @@ Before running this code :
 Algos used :
 1.) Linear regression using gradient descent with feature normalization
 2.) Predicting the majority year as the output
-
+3.) Logistic regression with regularization
+	lambda = 0
+		Training Set Accuracy: 8.842285
+		Test Set Accuracy: 8.018594
