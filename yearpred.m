@@ -10,7 +10,9 @@ X_test = data([463716:end],[2:end]);
 m = length(y);
 
 fprintf("Train and test data loaded\n");
+findRange(y,y_test);
 pause;
+
 
 fprintf('Adding Polynomial Features\n');
 
