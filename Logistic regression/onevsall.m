@@ -6,9 +6,11 @@ n = size(X,2);
 all_theta = zeros(num_labels, n);
 
 initial_theta = zeros(n,1);
-options = optimset('GradObj', 'on', 'MaxIter', 100);
+options = optimset('GradObj', 'on', 'MaxIter', 50);
 
 for c = 1:num_labels
+	printf('%d\n', c);
+	fflush(stdout);
 	[theta] = fmincg(@(t)(costFunction(t, X, (y == c), lambda) ), initial_theta, options );
 	all_theta(c,:) = theta';
 end
