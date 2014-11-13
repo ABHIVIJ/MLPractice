@@ -1,2 +1,5 @@
-Forward Propogation complete.
-Back Propogation not done.
+Execution under progress 
+Start : 7.15
+        8.10 : Iter 6  | Cost : 7.162045e+00
+        8.45 : Iter 13 | Cost : 5.030155e+00
+        11.15: Iter 51 | Cost : 4.285372e+00
