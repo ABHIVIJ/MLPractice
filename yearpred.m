@@ -22,9 +22,11 @@ X_test = addPolyFeatures(X_test);
 fprintf('X and X_test now contains Polynomial features\n');
 pause;
 
+
 fprintf("Normalizing Features ...\n");
 [X mu sigma] = featureNormalize(X);
 fprintf("Features normalized\n");
+pause;
 
 X = [ones(m,1) X];
 
