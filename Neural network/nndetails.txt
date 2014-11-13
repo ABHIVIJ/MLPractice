@@ -1,0 +1,2 @@
+Forward Propogation complete.
+Back Propogation not done.
