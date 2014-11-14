@@ -1,5 +1,14 @@
-Execution under progress 
-Start : 7.15
-        8.10 : Iter 6  | Cost : 7.162045e+00
-        8.45 : Iter 13 | Cost : 5.030155e+00
-        11.15: Iter 51 | Cost : 4.285372e+00
+lambda=1, max_iter=100, hidden_layer_size = 100
+	Start : 7.15
+		8.10 : Iter 6  | Cost : 7.162045e+00
+		8.45 : Iter 13 | Cost : 5.030155e+00
+		11.15: Iter 51 | Cost : 4.285372e+00
+		11.40: Iter 55 | Cost : 4.252286e+00
+		12   : Iter 60 | Cost : 4.244332e+00
+	
+		Finally....
+		Iteration   100 | Cost: 4.189659e+00
+		Training Set Accuracy: 8.716130
+		Test Set Accuracy: 8.105752
+
+
