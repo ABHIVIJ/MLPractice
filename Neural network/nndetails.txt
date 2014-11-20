@@ -17,4 +17,28 @@ lambda=1, max_iter=100, hidden_layer_size = 120 [22 hours approx]
 		Training Set Accuracy: 8.798508
 		Test Set Accuracy: 8.022468
 
+lambda=5, max_iter=20, hidden_layer_size = 100
+		Iteration    20 | Cost: 4.468115e+00
+		Training Set Accuracy: 7.254456
+		Test Set Accuracy: 7.193492
+
+lambda=5, max_iter=20, hidden_layer_size = 90
+		Iteration    20 | Cost: 4.535337e+00
+		Training Set Accuracy: 7.119244
+		Test Set Accuracy: 7.042417
+
+lambda=1, max_iter=20, hidden_layer_size = 90
+		Iteration    20 | Cost: 4.403298e+00
+		Training Set Accuracy: 7.456735
+		Test Set Accuracy: 7.520821
+
+lambda=1, max_iter=20, hidden_layer_size = 100
+		Iteration    20 | Cost: 4.498680e+00
+		Training Set Accuracy: 6.922140
+		Test Set Accuracy: 6.918458
+
+lambda=1, max_iter=100, hidden_layer_size = 90
+		Iteration   100 | Cost: 4.187024e+00
+		Training Set Accuracy: 8.772198
+		Test Set Accuracy: 8.014720
 
