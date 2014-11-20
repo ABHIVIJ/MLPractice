@@ -20,7 +20,7 @@ fprintf("Data ready\n");
 pause;
 
 input_layer_size = 90;
-hidden_layer_size = 100;
+hidden_layer_size = 90;
 num_labels = 90;
 
 theta1 = randInitializeWeights(input_layer_size, hidden_layer_size);
