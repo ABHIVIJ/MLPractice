@@ -20,7 +20,7 @@ fprintf("Data ready\n");
 pause;
 
 input_layer_size = 90;
-hidden_layer_size = 90;
+hidden_layer_size = 100;
 num_labels = 90;
 
 theta1 = randInitializeWeights(input_layer_size, hidden_layer_size);
@@ -30,7 +30,7 @@ nn_params = [theta1(:); theta2(:)];
 fprintf("Checked\n");
 pause;
 
-lambda = 1;
+lambda = 5;
 
 options = optimset('MaxIter', 100);
 costFunction = @(p) nnCostFunction(p, ...
