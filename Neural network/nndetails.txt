@@ -18,7 +18,9 @@ lambda=5, max_iter=100, hidden_layer_size = 100
 		Test Set Accuracy: 8.223901
 
 lambda=10, max_iter=100, hidden_layer_size = 100
-
+		Iteration   100 | Cost: 4.169960e+00
+		Training Set Accuracy: 9.003591
+		Test Set Accuracy: 8.419524
 
 lambda=1, max_iter=100, hidden_layer_size = 120 [22 hours approx] 
 		Iteration   100 | Cost: 4.183881e+00
